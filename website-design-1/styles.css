@@ -1,0 +1,481 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        270deg,
+        #1D4350,
+        #A43931,
+        #1D4350
+    );
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    animation: body-shine 14s ease infinite;
+}
+
+@keyframes body-shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.desktop-navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.visit-counter {
+    margin: 25px 25px;
+    color: #f1f1f1;
+}
+
+.visit-counter span {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+}
+
+.desktop-navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 25px 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    margin: 25px 25px;
+    gap: 20px;
+}
+
+.desktop-navbar ul li a {
+    color: rgb(170, 170, 170);
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Base state for all social icons */
+.desktop-navbar ul li a i {
+    font-size: 1.4rem; /* Adjust size as needed */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Instagram-specific hover effect */
+.desktop-navbar ul li a:hover .fa-instagram,
+.desktop-navbar .fa-instagram:hover {
+    /* Instagram radial gradient */
+    background: radial-gradient(circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285AEB 90%);
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    
+    transform: scale(1.15); /* Slight grow effect */
+}
+
+/* Optional: Slight hover lift for all icons */
+.desktop-navbar ul li a:hover i {
+    transform: translateY(-3px);
+    color: #ffffff; /* Brighten all icons on hover */
+}
+
+/* Optional: Reset other links on hover (if you want only Instagram to change) */
+.desktop-navbar ul li a:hover {
+  color: rgb(170, 170, 170); /* Keep text color consistent */
+}
+
+.sidebar-btn {
+    display: none;
+}
+
+#mySidebar {
+    display: none;
+    z-index: 9999 !important;
+}
+
+/* sections */
+section {
+    min-height: 100vh;
+    scroll-margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HOME */
+#home {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+
+#home img {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    margin-bottom: 25px;
+    box-shadow: 4px 8px 16px rgb(0, 0, 0, 0.3);
+}
+#home h1 {
+    font-size: 42px;
+    /* text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+#home p, 
+#about p,
+#stack p,
+#portfolio p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    /* text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+#home a,
+#about a,
+#stack a,
+#portfolio a {
+    background-color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2C3E50;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#home a:hover,
+#about a:hover,
+#stack a:hover,
+#portfolio a:hover {
+    transform: translateY(-5px);
+}
+
+#about {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+
+#about h1 {
+    margin-bottom: 10px;
+}
+
+#about p {
+    width: fit-content;
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#stack {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+
+#stack .card-container {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    font-size: large;
+}
+
+#stack .card-container li {
+    padding: 5px;
+}
+#stack .card-container i {
+    font-size: x-large;
+}
+
+#stack .cards {
+    margin-right: 15px;
+    padding-top: none !important;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+    color: #1D4350;
+    font-weight: 600;
+}
+
+#stack .cards ol {
+    line-height: 3;
+}
+#stack h1 {
+    margin-bottom: 10px;
+}
+
+#stack .cards h4 {
+    color: #f1f1f1;
+    padding: 10px 20px;
+    background-color: #1D4350;
+    padding-left: 35px;
+}
+/* scroll button */
+.scroll-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.scroll-btn i {
+    font-size: 1.4rem;
+    animation: bounce 1.5s infinite;
+}
+
+.scroll-btn .fa-lightbulb,
+.scroll-btn .fa-briefcase,
+.scroll-btn .fa-gears,
+.scroll-btn .fa-phone {
+    animation: none;
+}
+
+/* github button and contacts */
+.github-link,
+.contacts {
+    position: fixed;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    font-size: 1.4rem;
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.github-link {
+    right: 25px;
+    bottom: 25px;
+}
+
+.contacts {
+    left: 25px;
+    bottom: 25px;
+}
+
+.github-link:hover,
+.contacts:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.contacts-section {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+/* scroll up button */
+.scroll-top-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top-btn i {
+    animation: bounce 1.5s infinite;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#portfolio {
+    flex-direction: column;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff;
+}
+
+.contacts-section ul {
+    list-style: none;
+}
+
+.contacts-section ul li a {
+    color: #ffffff;
+    background-color: #1D4350;
+}
+
+/* floating tech stack background */
+.tech-stack-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0; /* behind content */
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* base icon style */
+.tech-stack-bg i {
+    position: absolute;
+    font-size: 3.2rem;
+    opacity: 0.14;
+    animation: float 16s ease-in-out infinite;
+    filter: blur(0.3px);
+}
+
+/* SCATTERED POSITIONS — ALL VISIBLE */
+.tech-stack-bg i:nth-child(1)  { top: 8%;  left: 10%; animation-delay: 0s; }
+.tech-stack-bg i:nth-child(2)  { top: 15%; left: 45%; animation-delay: 2s; }
+.tech-stack-bg i:nth-child(3)  { top: 10%; left: 80%; animation-delay: 4s; }
+
+.tech-stack-bg i:nth-child(4)  { top: 30%; left: 15%; animation-delay: 1s; }
+.tech-stack-bg i:nth-child(5)  { top: 35%; left: 55%; animation-delay: 3s; }
+.tech-stack-bg i:nth-child(6)  { top: 28%; left: 82%; animation-delay: 5s; }
+
+.tech-stack-bg i:nth-child(7)  { top: 55%; left: 8%;  animation-delay: 2s; }
+.tech-stack-bg i:nth-child(8)  { top: 60%; left: 38%; animation-delay: 4s; }
+.tech-stack-bg i:nth-child(9)  { top: 58%; left: 70%; animation-delay: 6s; }
+
+.tech-stack-bg i:nth-child(10) { top: 75%; left: 15%; animation-delay: 1s; }
+.tech-stack-bg i:nth-child(11) { top: 78%; left: 48%; animation-delay: 3s; }
+.tech-stack-bg i:nth-child(12) { top: 72%; left: 85%; animation-delay: 5s; }
+
+.tech-stack-bg i:nth-child(13) { top: 45%; left: 28%; animation-delay: 6s; }
+.tech-stack-bg i:nth-child(14) { top: 42%; left: 60%; animation-delay: 7s; }
+.tech-stack-bg i:nth-child(15) { top: 50%; left: 90%; animation-delay: 8s; }
+
+/* floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-18px) translateX(8px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(6px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 738px) {
+    .visit-counter span {
+        font-size: x-small;
+    }
+    
+    .desktop-navbar ul {
+        display: none;
+    }
+
+    #home h1 {
+        font-size: 1.4rem;
+    }
+    #home p {
+        font-size: small;
+    }
+    
+    #about p {
+        font-size: smaller;
+        width: 300px;
+    }
+    .github-text,
+    .contacts-text {
+        display: none;
+    }
+    #stack .card-container {
+        display: block;
+        font-size: 10px;
+    }
+    #home a, #about a, #stack a, #portfolio a {
+        padding: 4px 12px;
+    }
+    .sidebar-btn {
+        display: block;
+        margin: 25px 25px;
+        font-size: larger;
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+        color: #ffffff;
+        padding: 5px;
+    }
+    #mySidebar {
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        background-color: #1D4350;
+        height: inherit;
+        padding: 35px;
+        opacity: 0.8;
+    }
+    #mySidebar button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        width: inherit;
+        font-size: large;
+        background-color: transparent;
+        color: #ffffff;
+        border: none;
+    }
+    #mySidebar ul {
+        margin: 25px 25px;
+        line-height: 3;
+        list-style-type: none;
+    }
+    #mySidebar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}

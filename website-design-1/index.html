@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>JMDevStack</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- montserrat font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- devicon.dev cdn -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
+</head>
+<body>
+    <nav class="desktop-navbar">
+        <!-- Visit Counter -->
+        <div class="visit-counter">
+            <span id="visit-count"><i class="fa-solid fa-eye"></i> Loading...</span>
+        </div>
+
+        <ul class="social-links">
+            <li>
+                <a href="https://www.facebook.com/jmtl.jmdev" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i> <!-- Use fa-facebook-f for thinner icon -->
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+        </ul>
+
+        <button class="sidebar-btn" onclick="opensidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mySidebar">
+        <ul class="sidebar">
+            <button onclick="closesidebar()">Close &times;</button>
+            <li>
+                <a href="https://www.facebook.com/jmtl.jmdev" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i> Linkedin 
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+
+    <!-- floating stacks for design and dispaly -->
+    <div class="tech-stack-bg">
+        <i class="devicon-html5-plain"></i>
+        <i class="devicon-css3-plain"></i>
+        <i class="devicon-javascript-plain"></i>
+        <i class="devicon-php-plain"></i>
+        <i class="devicon-dot-net-plain"></i>
+        <i class="devicon-react-original"></i>
+        <i class="devicon-angularjs-plain"></i>
+        <i class="devicon-vuejs-plain"></i>
+        <i class="devicon-nodejs-plain"></i>
+        <i class="devicon-docker-plain"></i>
+        <i class="devicon-mysql-plain"></i>
+        <i class="devicon-mongodb-plain"></i>
+        <i class="devicon-laravel-plain"></i>
+        <i class="devicon-git-plain"></i>
+        <i class="devicon-github-original"></i>
+    </div>
+
+    <!-- main section -->
+    <main>
+        <!-- home section -->
+        <section class="home" id="home">
+            <!-- Linux SVG -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" class="linux-svg"/>s -->
+            <!-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" class="ubuntu-svg"/> -->
+            
+            <!-- JM Dev profile photo -->
+            <img src="jmdev.jpg" alt="JMDevStack" class="jmdev">
+            <h1><i class="fa-solid fa-hand"></i> Welcome to JMDevStack! </h1>
+            <p><i class="fa-solid fa-brain"></i> Turning ideas into scalable solutions <br>
+            through full stack development
+            </p>
+
+            <!-- scroll btn to next section -->
+            <a href="#about" class="scroll-btn">
+                <i class="fa-solid fa-lightbulb"></i> About Me 
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- about section -->
+        <section class="about" id="about">
+            <h1><i class="fa-solid fa-person"></i> About JM Dev</h1>
+            <p>
+                JM Dev is an aspiring <strong>Full Stack Developer</strong> who is continously learning, designing, and building websites, 
+                web applications, and systems. Specialized on <strong>Web Development. </strong> 
+            </p> 
+
+            <p>
+                His name is <strong>Juan Miguel T. Lahorra</strong> who is currently at in 4th year of his college journey at 
+                <strong>Divine Word College of Legazpi </strong> taking Bachelor of Science in <strong>Information Technology</strong> 
+                located at Legazpi City, Albay, Philippines.
+            </p>
+
+            <!-- scroll btn to next section -->
+            <a href="#stack" class="scroll-btn">
+                <i class="fa-solid fa-gears"></i> stack 
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- stack section-->
+        <section class="stack" id="stack">
+            <h1><i class="fa-solid fa-gears"></i> Stack </h1>
+            <div class="card-container">
+                <div class="cards">
+                    <!-- frontend development -->
+                    <h4>
+                        Web Frontend Development
+                    </h4>
+                        <ol>
+                            <li><i class="devicon-html5-plain"></i>
+                                <i class="devicon-css3-plain"></i>
+                                <i class="devicon-javascript-plain"></i>
+                                <i class="devicon-tailwindcss-plain"></i>
+                                <i class="devicon-vuejs-plain"></i>
+                            </li>
+                        </ol>
+                        
+                    <h4>
+                        Web Backend Development
+                    </h4>
+                        <ol>
+                            <li>
+                                <i class="devicon-php-plain"></i>
+                                <i class="devicon-nodejs-plain"></i>
+                                <i class="devicon-oauth-plain"></i>
+                                <i class="devicon-laravel-plain"></i>
+                                JWT
+                            </li>
+                        </ol>
+                </div>
+
+                <div class="cards">
+                    <!-- database -->
+                    <h4>
+                        Database Management Systems
+                    </h4>
+                        <ol>
+                            <li>
+                                <i class="devicon-mariadb-plain"></i>
+                                <i class="devicon-mysql-plain"></i>
+                                <i class="devicon-mongodb-plain"></i>
+                                <i class="devicon-firebase-plain"></i>
+                            </li>
+                        </ol>
+                    
+                    <h4>
+                        Desktop Software Development
+                    </h4>
+                        <ol>
+                            <li>
+                                <i class="devicon-dot-net-plain"></i>
+                                <i class="devicon-csharp-plain"></i>
+                            </li>
+                        </ol>
+                </div>
+                    
+                <div class="cards">
+                    <!-- APIs -->
+                    <h4>
+                        APIs
+                    </h4>
+                        <ol>
+                            <li>
+                                RESTful API, ASP.NET, GRAPHQL
+                            </li>
+                        </ol>
+                </div>
+            </div>
+
+            <!-- scroll btn to next section -->
+            <a href="#portfolio" class="scroll-btn">
+                <i class="fa-solid fa-briefcase"></i> Portfolio
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h1>
+                <i class="fa-solid fa-briefcase"></i> Portfolio
+            </h1>
+
+            <p>Coming soon...</p>
+
+            <!-- scroll btn to next section -->
+            <a href="#contacts-section" class="scroll-btn">
+                <i class="fa-solid fa-phone"></i> Contacts
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section class="contacts-section" id="contacts-section">
+            <h1><i class="fa-solid fa-phone"></i> Contacts</h1>
+            <p>
+                You can contact JM Dev through these communication platforms:
+            </p> <br>
+            <ul>
+                <li>
+                    <i class="fa-brands fa-facebook-messenger"></i> Facebook Messenger <br>
+                    @jmtl.jmdev 
+                </li> <br>
+                <li>
+                    <i class="fa-brands fa-whatsapp"></i> Whatsapp Business <br>
+                    <i class="fa-brands fa-viber"></i> Rakuten Viber <br>
+                    +63 928 332 9944
+                </li>
+            </ul>
+        </section>
+
+        <!-- github button link -->
+        <a href="https://www.github.com/jmdev11webdev" target="_blank" class="github-link">
+            <i class="fa-brands fa-github"></i> 
+            <span class="github-text">Github</span>
+            <!-- <i class="fa-solid fa-external-link"></i> -->
+        </a>
+
+        <!-- contacts button redirect to contacts section -->
+        <a href="#contacts-section" class="contacts">
+            <i class="fa-solid fa-phone"></i> 
+            <span class="contacts-text">Contacts</span>
+            <!-- <i class="fa-solid fa-external-link"></i> -->
+        </a>
+    </main>
+
+    <!-- move up 1 section a time button -->
+    <button class="scroll-top-btn" aria-label="Scroll up">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>
